@@ -28,13 +28,12 @@ jobs:
         run: |
           npm ci
           npm run build
-          git config user.email "build@glotpress.blog"
-          git config user.name "GlotPress Build"
-          git add .
-          git commit -m "Build" || true
 
       - name: WordPress.org plugin update
         uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: true
+          dry-run: true
         env:
           SVN_USERNAME: ${{ secrets.WORDPRESSORG_SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.WORDPRESSORG_SVN_PASSWORD }}

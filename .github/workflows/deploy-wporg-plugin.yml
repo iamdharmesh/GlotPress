@@ -1,6 +1,7 @@
 name: Deploy plugin to WordPress.org
 
 on:
+  workflow_dispatch:
   release:
     types: [published]
 

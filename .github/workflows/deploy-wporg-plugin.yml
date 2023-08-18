@@ -30,11 +30,12 @@ jobs:
           npm run build
 
       - name: WordPress.org plugin update
-        uses: 10up/action-wordpress-plugin-deploy@stable
+        uses: akirk/action-wordpress-plugin-deploy@patch-1
         with:
           generate-zip: true
           dry-run: true
         env:
-          SVN_USERNAME: ${{ secrets.WORDPRESSORG_SVN_USERNAME }}
-          SVN_PASSWORD: ${{ secrets.WORDPRESSORG_SVN_PASSWORD }}
+          SVN_USERNAME: test
+          SVN_PASSWORD: password
+          VERSION: 0.0.1
           SLUG: glotpress

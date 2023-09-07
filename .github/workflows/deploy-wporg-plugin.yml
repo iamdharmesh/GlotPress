@@ -30,7 +30,7 @@ jobs:
           npm ci
 
       - name: WordPress.org plugin update
-        uses: iamdharmesh/action-wordpress-plugin-deploy@fix-2.2.1
+        uses: 10up/action-wordpress-plugin-deploy@fix/136
         with:
           generate-zip: true
           dry-run: true

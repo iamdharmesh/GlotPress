@@ -28,7 +28,6 @@ jobs:
       - name: Build minified JavaScript and CSS and commit it just for the release
         run: |
           npm ci
-          npm run build
 
       - name: WordPress.org plugin update
         uses: akirk/action-wordpress-plugin-deploy@patch-1
